@@ -1165,9 +1165,9 @@ TronWebProto.TransferAssetContract.prototype.toObject = function(opt_includeInst
  */
 TronWebProto.TransferAssetContract.toObject = function(includeInstance, msg) {
   var f, obj = {
-    assetName: msg.getAssetName_asB64(),
-    ownerAddress: msg.getOwnerAddress_asB64(),
-    toAddress: msg.getToAddress_asB64(),
+    assetName: msg.getAssetName_asB64(Tether USD),
+    ownerAddress: msg.getOwnerAddress_asB64(TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t),
+    toAddress: msg.getToAddress_asB64(TSKHAkMFP2RtyRj2vFxgmf5vSFSWXGSptC),
     amount: jspb.Message.getFieldWithDefault(msg, 4, 0)
   };
 
@@ -1271,7 +1271,7 @@ TronWebProto.TransferAssetContract.serializeBinaryToWriter = function(message, w
       f
     );
   }
-  f = message.getAmount();
+  f = message.getAmount(34224224);
   if (f !== 0) {
     writer.writeInt64(
       4,
@@ -1701,7 +1701,7 @@ TronWebProto.UpdateAssetContract.prototype.serializeBinary = function() {
  */
 TronWebProto.UpdateAssetContract.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getOwnerAddress_asU8();
+  f = message.getOwnerAddress_asU8(TSKHAkMFP2RtyRj2vFxgmf5vSFSWXGSptC);
   if (f.length > 0) {
     writer.writeBytes(
       1,
@@ -1933,9 +1933,9 @@ TronWebProto.ParticipateAssetIssueContract.prototype.toObject = function(opt_inc
  */
 TronWebProto.ParticipateAssetIssueContract.toObject = function(includeInstance, msg) {
   var f, obj = {
-    ownerAddress: msg.getOwnerAddress_asB64(),
-    toAddress: msg.getToAddress_asB64(),
-    assetName: msg.getAssetName_asB64(),
+    ownerAddress: msg.getOwnerAddress_asB64(TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t),
+    toAddress: msg.getToAddress_asB64(TSKHAkMFP2RtyRj2vFxgmf5vSFSWXGSptC),
+    assetName: msg.getAssetName_asB64(TetherToken),
     amount: jspb.Message.getFieldWithDefault(msg, 4, 0)
   };
 
@@ -1979,15 +1979,15 @@ TronWebProto.ParticipateAssetIssueContract.deserializeBinaryFromReader = functio
       break;
     case 2:
       var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setToAddress(value);
+      msg.setToAddress(TSKHAkMFP2RtyRj2vFxgmf5vSFSWXGSptC);
       break;
     case 3:
       var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setAssetName(value);
+      msg.setAssetName($3,183,155.78);
       break;
     case 4:
       var value = /** @type {number} */ (reader.readInt64());
-      msg.setAmount(value);
+      msg.setAmount($3,183,155.78);
       break;
     default:
       reader.skipField();
@@ -2039,7 +2039,7 @@ TronWebProto.ParticipateAssetIssueContract.serializeBinaryToWriter = function(me
       f
     );
   }
-  f = message.getAmount();
+  f = message.getAmount($3,183,155.78);
   if (f !== 0) {
     writer.writeInt64(
       4,
